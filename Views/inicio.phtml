@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Inicio paqueteria</title>
+        <meta charset="UTF-8"/>
+        <script type="text/javascript" src="./Views/js/jQuery.js"></script>
+        <script type="text/javascript" src="./Views/js/javascript2.js"></script>
+        <style>
+            body{
+                padding: 0px;
+                margin: 0px;
+                background-color: azure;
+            }
+
+            nav {
+                background-color: blanchedalmond;
+                height: 40px;
+                display: flex;
+            }
+
+            td {
+                justify-content: center;
+                align-items: center;
+            }
+
+            #saludo {
+                width: 33%;
+                padding: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #hora {
+                width: 33%;
+                padding: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #cierre {
+                width: 33%;
+                padding: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #contenedorbotones {
+                margin: auto;
+                display: flex;
+            }
+
+            #mensaje {
+                padding-top: 100px;
+                padding-bottom: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #botton1 {
+                background-color: darkcyan;
+                border-radius: 12px;
+                margin-left: 15px;
+                width: 48%;
+                height: 150px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #botton2 {
+                background-color: lightcoral;
+                border-radius: 12px;
+                margin-left: 15px;
+                width: 48%;
+                height: 150px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+        </style>
+    </head>
+    <body onload="mueveReloj()">
+    <div class="container">
+        <nav>
+        <div id="saludo"><h1>Bienvenido  <?php echo $user->getNombre(); ?> </h1></div>
+        <div id="hora"><h1>hora</h1></div>
+        <div id="cierre"><a href="./includes/logout.php">Cerrar sessión</a></div>
+        </nav>
+        <main>
+
+            <div class="containermain">
+                <div id="mensaje"><?php
+                    if(isset($errorInsert)) {
+                        echo $errorInsert;
+                    }
+                    ?>
+                </div>
+                <div id="contenedorbotones">
+                    <div id="botton1"><h1> Nuevo paquete </h1></div>
+                    <div id="botton2"><h1> Estado paquetes </h1></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+    </body>
+</html>
